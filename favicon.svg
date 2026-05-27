@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <path d="M 5 14 Q 5 3 16 3 Q 27 3 27 14 L 27 30 L 5 30 Z" fill="#1f1d1a"/>
+  <text x="16" y="22" text-anchor="middle"
+        font-family="Cormorant Garamond, Georgia, serif"
+        font-weight="600" font-size="15"
+        letter-spacing="-0.5"
+        fill="#f4f2ee">DT</text>
+</svg>
