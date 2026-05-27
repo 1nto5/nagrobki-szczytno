@@ -4,20 +4,21 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dariusz Twardowski - Nagrobki, parapety, blaty kuchenne - Szczytno</title>
-<meta name="description" content="Zakład kamieniarski Dariusz Twardowski w Szczytnie. Nagrobki, parapety, blaty kuchenne z granitu i marmuru. ul. Pomorska 16. Od 1995 roku." />
+<meta name="description" content="Zakład kamieniarski Dariusz Twardowski w Szczytnie. 30 lat praktyki od 1995 roku. Nagrobki, parapety, blaty kuchenne z granitu i marmuru. Ulica Pomorska 16." />
 <link rel="canonical" href="https://nagrobkiszczytno.pl/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pl_PL" />
 <meta property="og:site_name" content="Dariusz Twardowski - Zakład kamieniarski" />
 <meta property="og:title" content="Dariusz Twardowski - Nagrobki, parapety, blaty kuchenne - Szczytno" />
-<meta property="og:description" content="Zakład kamieniarski w Szczytnie. Nagrobki, parapety, blaty kuchenne z granitu i marmuru. Od 1995 roku." />
+<meta property="og:description" content="Zakład kamieniarski Dariusz Twardowski w Szczytnie. 30 lat praktyki od 1995 roku. Nagrobki, parapety, blaty kuchenne z granitu i marmuru. Ulica Pomorska 16." />
 <meta property="og:url" content="https://nagrobkiszczytno.pl/" />
 <meta property="og:image" content="https://nagrobkiszczytno.pl/og.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta name="keywords" content="nagrobki Szczytno, pomniki Szczytno, zakład kamieniarski Szczytno, kamieniarstwo Szczytno, parapety kamienne Szczytno, blaty kuchenne kamień Szczytno, nagrobki granitowe, pomniki granitowe, nagrobki marmurowe, liternictwo nagrobków, renowacja nagrobków, nagrobki podwójne, nagrobki rodzinne, parapety z marmuru, Dariusz Twardowski Szczytno, Pomorska 16 Szczytno, kamieniarz Szczytno, kamieniarz Warmia-Mazury, powiat szczycieński" />
+<meta name="keywords" content="nagrobki Szczytno, pomniki Szczytno, pomniki cmentarne Szczytno, groby Szczytno, grobowce Szczytno, płyty nagrobne Szczytno, tablice nagrobne Szczytno, nagrobki granitowe Szczytno, pomniki granitowe Szczytno, nagrobki marmurowe Szczytno, nagrobki podwójne, nagrobki rodzinne, liternictwo nagrobków, renowacja nagrobków, renowacja pomników Szczytno, zakład kamieniarski Szczytno, kamieniarstwo Szczytno, kamieniarz Szczytno, kamieniarz 30 lat Szczytno, kamieniarz Warmia-Mazury, parapety kamienne Szczytno, parapety z granitu, parapety z marmuru, blaty kuchenne kamień Szczytno, blaty granitowe Szczytno, blaty marmurowe, Dariusz Twardowski Szczytno, Pomorska 16 Szczytno, powiat szczycieński" />
 <meta name="twitter:card" content="summary_large_image" />
+<link rel="alternate" type="text/plain" title="LLM-friendly summary" href="/llms.txt" />
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="alternate icon" href="/favicon.ico" />
@@ -133,6 +134,10 @@
   .brand .est{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500;transform:translateY(-1px)}
   .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:.5px solid var(--ink);border-radius:999px;font-size:13px;letter-spacing:.02em;transition:background .2s, color .2s}
   .nav-cta:hover{background:var(--ink);color:var(--bg)}
+  .nav-links{display:flex;gap:28px;font-size:13px;letter-spacing:.04em;margin:0 auto 0 48px}
+  .nav-links a{color:var(--ink-2);border-bottom:.5px solid transparent;padding-bottom:2px;transition:color .2s, border-color .2s}
+  .nav-links a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  @media (max-width:860px){.nav-links{display:none}}
 
   /* hero */
   .hero{padding:140px 0 90px;position:relative}
@@ -143,6 +148,7 @@
   .h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px, 7.2vw, 108px);line-height:.98;letter-spacing:-.015em;margin:20px 0 0;color:var(--ink);text-wrap:balance}
   .h1 em{font-style:italic;color:var(--accent);font-weight:400}
   .hero-sub{margin-top:28px;font-size:17px;line-height:1.55;color:var(--ink-2);max-width:46ch;text-wrap:pretty}
+  .hero-usp{margin:18px 0 0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;max-width:46ch}
   .hero-meta{display:flex;flex-wrap:wrap;gap:28px 40px;margin-top:36px;padding-top:24px;border-top:.5px solid var(--line)}
   .hero-meta dt{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:500}
   .hero-meta dd{margin:0;font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:.005em}
@@ -259,6 +265,11 @@
       <span>Dariusz Twardowski</span>
       <span class="est">Zakład kamieniarski</span>
     </a>
+    <nav class="nav-links" aria-label="Sekcje strony">
+      <a href="#uslugi">Usługi</a>
+      <a href="#warsztat">Warsztat</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <a href="#kontakt" class="nav-cta">Kontakt <span class="arrow" aria-hidden="true"></span></a>
   </div>
 </header>
@@ -266,9 +277,10 @@
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-load">
-      <span class="eyebrow">Zakład kamieniarski · Szczytno</span>
+      <span class="eyebrow">Zakład kamieniarski · Szczytno · od 1995</span>
       <h1 class="h1">Nagrobki, parapety,<br/><em>blaty kuchenne.</em></h1>
-      <p class="hero-sub">Wykonujemy nagrobki, parapety oraz blaty kuchenne z granitu i marmuru. Działamy w Szczytnie od 1995 roku.</p>
+      <p class="hero-sub">Samodzielnie tniemy, obrabiamy i montujemy naturalny kamień. Wspólnie z Państwem dobieramy każdy element, gwarantując solidne i godne wykonanie całości, bez presji i pośpiechu.</p>
+      <p class="hero-usp">30 lat praktyki kamieniarskiej. Ten sam warsztat, ta sama jakość.</p>
       <div class="hero-actions">
         <a href="tel:+48509535051" class="btn btn-primary">Zadzwoń <span class="arrow"></span></a>
         <a href="#uslugi" class="btn btn-ghost">Usługi</a>
@@ -290,7 +302,7 @@
     </div>
     <div class="hero-vis" aria-hidden="true">
       <div class="hero-vis-mask"></div>
-      <img src="images/hero-warsztat.jpg" alt="" loading="eager" id="heroImg" />
+      <img src="images/hero-warsztat.jpg" alt="Warsztat kamieniarski Dariusza Twardowskiego przy ulicy Pomorskiej w Szczytnie" loading="eager" id="heroImg" />
       <div class="hero-tag">
         <a href="https://maps.google.com/?q=ul.+Pomorska+16,+12-100+Szczytno" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:.5px solid rgba(244,242,238,.4);padding-bottom:1px;transition:border-color .25s">UL. POMORSKA 16<br/>Szczytno</a>
         <span style="text-align:right">30 lat<b>rzemiosła</b></span>
@@ -391,6 +403,7 @@
     <div class="foot-bot">
       <span>© 1995-2026 Dariusz Twardowski</span>
       <a href="https://maps.google.com/?q=ul.+Pomorska+16,+12-100+Szczytno" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.8">ul. Pomorska 16 · 12-100 Szczytno</a>
+      <span>Realizacja: <a href="https://adrianantosiak.pl" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;opacity:.8;transition:opacity .2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.8">Adrian Antosiak</a></span>
     </div>
   </div>
 </footer>
