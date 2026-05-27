@@ -51,6 +51,27 @@ Managed via home.pl panel (Domeny > nagrobkiszczytno.pl > Zarządzaj rekordami D
 - Canonical link + OG/Twitter Card meta tags set in `<head>`.
 - Hyphens only (`-`); never em dash (`-`) or en dash (`-`) in UI strings, comments, or docs.
 - **Local rankings are driven by Google Business Profile**, not the website. Set up a Profile next: same NAP as the JSON-LD here, photos of workshop + realizations, category "Stonemason / Granite supplier", service area Szczytno + powiat szczycieński.
+- `FAQPage` JSON-LD obok `LocalBusiness` - 8 pytań mirror-uje sekcję `#faq` na stronie.
+- `llms.txt` linkowany z `<head>` przez `rel="alternate"` + osobno serwowany z `/llms.txt`.
+- Rozbudowany `LocalBusiness` JSON-LD: `founder` (Person + jobTitle), `slogan`, `knowsAbout` (20 fraz tematycznych).
+
+## Brand brief
+
+Stosować przy każdej edycji tekstu na stronie i w `llms.txt`:
+
+- **Głęboka potrzeba persony** (5x Why): godna, trwała pamięć o bliskiej osobie - decyzja podejmowana raz w życiu.
+- **Archetypy marki**: Opiekun (troska, spokój, formalny "Państwo") + Twórca (rzemiosło ręczne, konkretne czynności, materiały po nazwie).
+- **USP**: "30 lat praktyki - od 1995. Ten sam warsztat, ten sam adres, ta sama jakość."
+- **Założyciel**: ojciec pana Dariusza pracował przy wykuwaniu pomników; Dariusz przejął zakład sąsiada w 1995, pracuje samodzielnie bez podwykonawców.
+- **Zakazy stylistyczne**: żadnej korpomowy ("firma", "klient", "oferta", "rozwiązania"), żadnych superlatywów ("najlepszy", "z pasją", "wysokiej jakości"), żadnego konglomeratu (klient go nie obrabia), żadnych em/en-dashów.
+
+## Do potwierdzenia z Dariuszem przed kolejnym deployem
+
+- FAQ #1 - czy podajemy widełki cenowe ("od X zł za pomnik pojedynczy granitowy") czy zostaje "wycena indywidualna".
+- FAQ #2 - czy 4-8 tygodni odpowiada rzeczywistości.
+- FAQ #5 - czy złocenie i malowanie liter są faktycznie oferowane.
+- FAQ #8 + JSON-LD `areaServed` - lista miejscowości (Pasym, Wielbark, Dźwierzuty, Jedwabno, Świętajno, Rozogi).
+- Warsztat - czy historia (ojciec, przejęcie zakładu sąsiada, "bez podwykonawców") jest ścisła.
 
 ## Phone numbers
 
