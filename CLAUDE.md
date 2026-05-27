@@ -1,6 +1,10 @@
 # nagrobkiszczytno.pl
 
-Production site for Dariusz Twardowski - zakład kamieniarski w Szczytnie. One-page Polish-only site for a stonemason (nagrobki, parapety, blaty kuchenne).
+Production site for **Wyrób Nagrobków Dariusz Twardowski** - zakład kamieniarski w Szczytnie. One-page Polish-only site for a stonemason (nagrobki, parapety, blaty kuchenne).
+
+## Official business name
+
+`Wyrób Nagrobków Dariusz Twardowski` (proper case, never ALL CAPS). This is the registered name confirmed on Oferteo and Centrum Opinii directory listings. Use this exact form in `<title>`, meta description/og tags, JSON-LD `name`, header brand, footer, `llms.txt` heading, and 404 title. The `founder` field in JSON-LD and references to him as a person stay "Dariusz Twardowski".
 
 ## Tech
 
