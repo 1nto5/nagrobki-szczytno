@@ -307,7 +307,10 @@
   .faq summary::after{content:"";flex-shrink:0;width:11px;height:11px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-3px);transition:transform .25s ease}
   .faq details[open] summary::after{transform:rotate(-135deg) translateY(0)}
   .faq details[open] summary{color:var(--accent)}
-  .faq-answer{padding:0 0 28px;color:var(--ink-2);font-size:16px;line-height:1.65;max-width:64ch;text-wrap:pretty}
+  .faq-answer{padding:0 0 28px;color:var(--ink-2);font-size:16px;line-height:1.65;max-width:64ch;text-wrap:pretty;overflow:hidden;transition:height .32s ease, padding-bottom .32s ease}
+  @media (prefers-reduced-motion: reduce){
+    .faq-answer{transition:none}
+  }
 
   /* contact */
   .phones{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:.5px solid var(--line)}
@@ -641,6 +644,54 @@
     window.addEventListener('scroll', onParallax, {passive:true});
     applyParallax();
   }
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.faq details').forEach(d=>{
+    const summary = d.querySelector('summary');
+    const content = d.querySelector('.faq-answer');
+    if(!summary || !content) return;
+    let animating = false;
+
+    summary.addEventListener('click', (e)=>{
+      if(reduceMotion) return;
+      e.preventDefault();
+      if(animating) return;
+      animating = true;
+      const closing = d.open;
+
+      const cleanup = () => {
+        content.style.height = '';
+        content.style.paddingBottom = '';
+        if(closing) d.open = false;
+        animating = false;
+        content.removeEventListener('transitionend', onEnd);
+      };
+      const onEnd = (ev) => {
+        if(ev.target !== content || ev.propertyName !== 'height') return;
+        cleanup();
+      };
+      content.addEventListener('transitionend', onEnd);
+
+      if(closing){
+        const h = content.scrollHeight;
+        content.style.height = h + 'px';
+        content.style.paddingBottom = '28px';
+        requestAnimationFrame(()=>{
+          content.style.height = '0px';
+          content.style.paddingBottom = '0px';
+        });
+      } else {
+        d.open = true;
+        const h = content.scrollHeight;
+        content.style.height = '0px';
+        content.style.paddingBottom = '0px';
+        requestAnimationFrame(()=>{
+          content.style.height = h + 'px';
+          content.style.paddingBottom = '28px';
+        });
+      }
+    });
+  });
 })();
 </script>
 
