@@ -52,22 +52,19 @@ Managed via home.pl panel (Domeny > nagrobkiszczytno.pl > Zarządzaj rekordami D
 - Hyphens only (`-`); never em dash (`-`) or en dash (`-`) in UI strings, comments, or docs.
 - **Local rankings are driven by Google Business Profile**, not the website. Set up a Profile next: same NAP as the JSON-LD here, photos of workshop + realizations, category "Stonemason / Granite supplier", service area Szczytno + powiat szczycieński.
 
-## Phone numbers - confirm before launch
+## Phone numbers
 
-The two numbers in `index.html` came from the design draft:
+Client-confirmed numbers (in `index.html` hero CTA, both `phone-card` blocks, footer `tel:` link, and JSON-LD `telephone` field):
 
-- Warsztat: `+48 89 624 24 95`
-- Komórka: `+48 602 358 471` (Dariusz Twardowski)
+- `+48 509 535 051` - Warsztat
+- `+48 509 535 052` - komórka
 
-These were inserted as samples in the correct Polish format. **Verify with the client and update in three places** (hero `tel:` link, two `phone-card` blocks in `#kontakt`, and the footer + JSON-LD `telephone` field) before going live.
+When updating, grep for `509 535` to catch every reference.
 
 ## To do before launch
 
-- Confirm phone numbers (see above).
 - Replace placeholder photos with real client photos (4 files in `images/`).
-- Add `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` to repo root (referenced in `<head>` but not yet created).
-- Generate a proper 1200x630 og:image and update `og:image` meta.
-- Submit `https://nagrobkiszczytno.pl/sitemap.xml` to Google Search Console.
+- Submit `https://nagrobkiszczytno.pl/sitemap.xml` to Google Search Console once domain is live.
 
 ## Conventions
 
