@@ -54,8 +54,9 @@ Managed via home.pl panel (Domeny > nagrobkiszczytno.pl > Zarządzaj rekordami D
 - `sitemap.xml` lists the single canonical URL.
 - Canonical link + OG/Twitter Card meta tags set in `<head>`.
 - Hyphens only (`-`); never em dash (`-`) or en dash (`-`) in UI strings, comments, or docs.
-- **Local rankings are driven by Google Business Profile**, not the website. Set up a Profile next: same NAP as the JSON-LD here, photos of workshop + realizations, category "Stonemason / Granite supplier", service area Szczytno + powiat szczycieński.
-- `FAQPage` JSON-LD obok `LocalBusiness` - 8 pytań mirror-uje sekcję `#faq` na stronie.
+- **Local rankings are driven by Google Business Profile**, not the website. The Profile **already exists, is verified, and has reviews** (as of 2026-06). Keep growing it: steady ethical review inflow, real photos of workshop + realizations, complete services. **Main category must be "Wytwórca pomników" (Monument maker)** - "Zakład kamieniarski" / "Stonemason" does NOT exist in the GBP category tree.
+- **Canonical NAP (must be identical character-for-character everywhere - site, JSON-LD, GBP, directories):** name "Wyrób Nagrobków Dariusz Twardowski"; address "ul. Pomorska 16, 12-100 Szczytno"; phone "+48 509 535 051" (mobile "+48 509 535 052"); hours pon-pt 8:00-17:00, sob 9:00-13:00.
+- `FAQPage` JSON-LD obok `LocalBusiness` - 8 pytań mirror-uje sekcję `#faq` na stronie **1:1 (zmiana treści wymaga edycji w obu miejscach)**. Odpowiedzi pisane answer-first (konkret w pierwszym zdaniu) pod ekstrakcję przez AI. Uwaga: bogate wyniki FAQ w Google SERP zostały wycofane - schema służy walidacji i cytowaniom AI, nie gwiazdkom w wynikach.
 - `llms.txt` linkowany z `<head>` przez `rel="alternate"` + osobno serwowany z `/llms.txt`.
 - Rozbudowany `LocalBusiness` JSON-LD: `founder` (Person + jobTitle), `slogan`, `knowsAbout` (20 fraz tematycznych).
 
@@ -71,10 +72,7 @@ Stosować przy każdej edycji tekstu na stronie i w `llms.txt`:
 
 ## Do potwierdzenia z Dariuszem przed kolejnym deployem
 
-- FAQ #1 - czy podajemy widełki cenowe ("od X zł za pomnik pojedynczy granitowy") czy zostaje "wycena indywidualna".
-- FAQ #2 - czy 4-8 tygodni odpowiada rzeczywistości.
-- FAQ #5 - czy złocenie i malowanie liter są faktycznie oferowane.
-- FAQ #8 + JSON-LD `areaServed` - lista miejscowości (Pasym, Wielbark, Dźwierzuty, Jedwabno, Świętajno, Rozogi).
+- **Potwierdzone jako poprawne (2026-06):** FAQ #1 (zostaje "wycena indywidualna"), FAQ #2 (4-8 tygodni), FAQ #5 (złocenie liter oferowane), FAQ #8 + `areaServed` (Pasym, Wielbark, Dźwierzuty, Jedwabno, Świętajno, Rozogi).
 - Warsztat - czy historia (ojciec, przejęcie zakładu sąsiada, "bez podwykonawców") jest ścisła.
 
 ## Phone numbers
@@ -86,10 +84,11 @@ Client-confirmed numbers (in `index.html` hero CTA, both `phone-card` blocks, fo
 
 When updating, grep for `509 535` to catch every reference.
 
-## To do before launch
+## Status / to do
 
-- Replace placeholder photos with real client photos (4 files in `images/`).
-- Submit `https://nagrobkiszczytno.pl/sitemap.xml` to Google Search Console once domain is live.
+- Site is **live and indexed**. Google Search Console: Domain property verified (DNS-TXT), sitemap submitted and read (status Success), homepage indexed. One stale `http://` 404 from launch day will self-resolve via the http->https redirect.
+- **Still pending:** replace placeholder photos with real client photos (4 files in `images/`), then enrich alt text + add WebP. AI-generated hero/nagrobek/parapet + Unsplash blat remain until then.
+- Full SEO roadmap (both ranking tracks + ready-to-paste GBP content) is in the approved plan. Open items needing Dariusz: GBP profile URL (-> JSON-LD `sameAs` + on-site links/CTA), NIP/REGON (-> footer + JSON-LD `vatID`/`taxID`), real photos.
 
 ## Conventions
 
